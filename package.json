@@ -7,8 +7,8 @@
     "react": "^16.1.1"
   },
   "dependencies": {
-    "@monsoon_inc/monsoon-components": "^1.0.4",
-    "deep-equal": "^1.0.1",
+    "eoa-components": "^1.0.2",
+    "eoa-styles": "^1.0.0",
     "dotenv": "^4.0.0",
     "enzyme": "^3.2.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -70,7 +70,6 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@monsoon_inc/monsoon-styles": "^1.0.0",
     "autoprefixer": "^7.1.6",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
