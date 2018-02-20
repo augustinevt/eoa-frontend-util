@@ -16,7 +16,7 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then((answers) => {
-    cp.execSync(`npm run build`, { stdio: [0,1,2]});
+    // cp.execSync(`npm run build`, { stdio: [0,1,2]});
   if (answers.deploy === 'yes') {
     cp.execSync(`aws s3 rm s3://eoautils --recursive`, { stdio: [0,1,2]});
     cp.execSync(`aws s3 sync ./build  s3://eoautils`, { stdio: [0,1,2]});

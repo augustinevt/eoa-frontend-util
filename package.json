@@ -7,10 +7,10 @@
     "react": "^16.1.1"
   },
   "dependencies": {
-    "eoa-components": "^1.0.2",
-    "eoa-styles": "^1.0.0",
     "dotenv": "^4.0.0",
     "enzyme": "^3.2.0",
+    "eoa-components": "^1.0.8",
+    "eoa-styles": "^1.0.0",
     "eslint-config-airbnb": "^16.1.0",
     "express": "^4.16.2",
     "immutable": "^3.8.2",

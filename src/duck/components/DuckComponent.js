@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Modal, Button } from '@monsoon_inc/monsoon-components';
+import { Form, Modal, Button } from 'eoa-components';
 
 export const letterTest = {
   method:  (val) => { return val.match(/[a-zA-Z]/) ? false : true; },

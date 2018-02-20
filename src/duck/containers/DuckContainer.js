@@ -4,7 +4,7 @@ import api from './../../api';
 
 import DuckComponent from './../components/DuckComponent';
 
-import { LoadingIndicator, Card } from '@monsoon_inc/monsoon-components';
+import { LoadingIndicator, Card } from 'eoa-components';
 
 const mapStateToProps = (state) => {
   return {
@@ -52,7 +52,7 @@ export class DuckContainer extends React.Component {
     return (
       <div>
         <DuckComponent foo={''}/>
-        <h1> EOA UTILS </h1>
+        <h1> This is the UTIL APP!! </h1>
         <div className="duck-container__user-grid">
           { users }
         </div>
