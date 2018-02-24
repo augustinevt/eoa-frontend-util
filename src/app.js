@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import './styles.js';
 
 import { containers as duckContainers } from './duck';
+import { containers as algContainers } from './alg';
 import createStore from './createStore';
 
 
@@ -19,7 +20,8 @@ class App extends React.Component {
       <Provider store={store}>
         <Router>
           <div>
-            <duckContainers.DuckContainer />
+            <Route key={`duck-route`} exact path={`/`} component={duckContainers.DuckContainer}/>
+            <Route key={`algorithm-route`} exact path={`/alg`} component={algContainers.algContainer}/>
           </div>
         </Router>
       </Provider>

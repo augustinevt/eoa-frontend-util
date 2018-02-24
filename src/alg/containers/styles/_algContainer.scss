@@ -1,0 +1,17 @@
+.duck-container {
+  border: .5px solid red;
+  padding: $container-padding;
+  background: grey;
+
+  &__user-grid {
+    padding-top: $md-margin;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$sm-margin;
+
+    .card {
+      flex: 1 1 30%;
+      margin: $sm-margin;
+    }
+  }
+}
