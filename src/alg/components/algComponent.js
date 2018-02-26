@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Modal, Button } from 'eoa-components';
 
+import bubbleSort from '../scripts/bubbleSort';
+
 export const letterTest = {
   method:  (val) => { return val.match(/[a-zA-Z]/) ? false : true; },
   message: 'No Letters Please'
@@ -40,16 +42,18 @@ const inputsConfig = [
     }
   ];
 
-export class DuckComponent extends React.Component {
+export class AlgComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      modalOpen: false,
+      // modalOpen: false,
+      data: null
     };
 
     this.consoleLog = this.consoleLog.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.updateData = this.updateData.bind(this);
   };
 
   consoleLog(e) {
@@ -60,6 +64,21 @@ export class DuckComponent extends React.Component {
   toggleModal(e) {
     this.setState({ ...this.state, modalOpen: !this.state.modalOpen });
   }
+
+  updateData() {
+    const bubbleSortGen = bubbleSort();
+    const interval = setInterval(() => {
+      const newData = bubbleSortGen.next();
+
+      if (newData.done) {
+        clearInterval(interval);
+      } else {
+        this.setState({...this.state, data: newData.value});
+      }
+    }, 1000);
+  }
+
+
 
   render() {
     const buttonsConfig = [
@@ -77,21 +96,26 @@ export class DuckComponent extends React.Component {
       }
     ];
     return (
-      <div className="duck-component">
-        <Button label="Open Form" onClick={this.toggleModal} />
-        <Modal open={this.state.modalOpen} onClose={this.toggleModal}>
-          <Form inputsConfig={inputsConfig}
-            buttonsConfig={buttonsConfig}
-            onSubmit={this.consoleLog}
-          />
-        </Modal>
+      <div className="alg-component">
+         <Button label="Open Form" onClick={this.updateData} />
+         <div>
+          { this.state.data }
+         </div>
       </div>
     );
   }
 }
 
-DuckComponent.propTypes = {
-  foo: PropTypes.string.isRequired,
-};
+// AlgComponent.propTypes = {
+//   foo: PropTypes.string.isRequired,
+// };
 
-export default DuckComponent;
+export default AlgComponent;
+
+// <Button label="Open Form" onClick={this.toggleModal} />
+// <Modal open={this.state.modalOpen} onClose={this.toggleModal}>
+//   <Form inputsConfig={inputsConfig}
+//     buttonsConfig={buttonsConfig}
+//     onSubmit={this.consoleLog}
+//   />
+// </Modal>

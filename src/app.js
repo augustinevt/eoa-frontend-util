@@ -5,6 +5,7 @@ import './styles.js';
 
 import { containers as duckContainers } from './duck';
 import { containers as algContainers } from './alg';
+import { containers as artContainers } from './art';
 import createStore from './createStore';
 
 
@@ -21,7 +22,7 @@ class App extends React.Component {
         <Router>
           <div>
             <Route key={`duck-route`} exact path={`/`} component={duckContainers.DuckContainer}/>
-            <Route key={`algorithm-route`} exact path={`/alg`} component={algContainers.algContainer}/>
+            <Route key={`algorithm-route`} exact path={`/alg`} component={algContainers.AlgContainer}/>
           </div>
         </Router>
       </Provider>

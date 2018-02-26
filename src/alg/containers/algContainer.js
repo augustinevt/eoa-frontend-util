@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import api from './../../api';
 
-import algComponent from './../components/algComponent';
+import AlgComponent from './../components/AlgComponent';
 
 import { LoadingIndicator, Card } from 'eoa-components';
 
@@ -50,6 +50,7 @@ export class DuckContainer extends React.Component {
     return (
       <div>
         <h1> This is the algorithm section!! </h1>
+        <AlgComponent />
       </div>
     );
   }
