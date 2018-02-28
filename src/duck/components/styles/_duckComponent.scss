@@ -1,4 +1,7 @@
 .duck-component {
+  svg: {
+    border: solid;
+  }
   .form {
     width: 100%;
     padding: 5px;
@@ -6,4 +9,9 @@
   .form__input-wrapper {
     margin-bottom: 5px;
   }
+
+}
+
+svg {
+  border: solid;
 }

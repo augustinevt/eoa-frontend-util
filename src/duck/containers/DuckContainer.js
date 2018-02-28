@@ -52,10 +52,6 @@ export class DuckContainer extends React.Component {
     return (
       <div>
         <DuckComponent foo={''}/>
-        <h1> This is the UTIL APP!! </h1>
-        <div className="duck-container__user-grid">
-          { users }
-        </div>
       </div>
     );
   }
