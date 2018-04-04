@@ -4,7 +4,7 @@ import api from './../../api';
 
 import DuckComponent from './../components/DuckComponent';
 
-import { Card } from 'eoa-components';
+import { LoadingIndicator, Card } from 'eoa-components';
 
 const mapStateToProps = (state) => {
   return {
@@ -47,7 +47,7 @@ export class DuckContainer extends React.Component {
   }
 
   render() {
-    const jsx = this.props.loading ? <div/> : <div className="duck-container">{process.env.NODE_ENV}<br/>{process.env.REACT_HELLO}</div>;
+    const jsx = this.props.loading ? <LoadingIndicator /> : <div className="duck-container">{process.env.NODE_ENV}<br/>{process.env.REACT_HELLO}</div>;
     const users = this.makeUserCards();
     return (
       <div>
