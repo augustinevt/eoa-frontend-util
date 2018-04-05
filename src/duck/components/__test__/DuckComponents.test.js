@@ -14,7 +14,7 @@ test('DuckComponent Snapshot', () => {
 
 xtest('Duck Enzyme', () => {
   const wrapper = mount(<DuckComponent foo={'Skrit Skrit'}/>);
-
+  // foo
   const thing = wrapper.find('div');
   expect(wrapper.find('div')).toHaveLength(1);
 });
