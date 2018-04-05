@@ -12,7 +12,7 @@ test('DuckComponent Snapshot', () => {
   expect(snapshot).toMatchSnapshot();
 });
 
-test('Duck Enzyme', () => {
+xtest('Duck Enzyme', () => {
   const wrapper = mount(<DuckComponent foo={'Skrit Skrit'}/>);
 
   const thing = wrapper.find('div');

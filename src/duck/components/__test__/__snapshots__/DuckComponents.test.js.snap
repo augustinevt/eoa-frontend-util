@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DuckComponent Snapshot 1`] = `
-<div>
-  Skrit Skrit
+<div
+  className="duck-component"
+>
+  <div
+    className="button default-button"
+    onClick={[Function]}
+  >
+    Open Form
+  </div>
 </div>
 `;
